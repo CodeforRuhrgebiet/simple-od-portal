@@ -21,9 +21,9 @@
     <p class="dataset__description">{{ object.description }}</p>
   {% endif %}
 
-  <a class="dataset__download-url" href="{{ object.data_file.url }}">{% trans 'Download as CSV' %}</a>
+  <a class="button dataset__download-url" href="{{ object.data_file.url }}">{% trans 'Download as CSV' %}</a>
 
-  <a class="dataset__source-url">{{ object.source_url|urlize }}</a>
+  <a class="button dataset__source-url" href="{{ object.source_url }}">{% trans 'Source' %}</a>
 
 </section>
 

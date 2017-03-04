@@ -10,3 +10,8 @@ body {
 // base
 @import './components/page.scss';
 
+// generic components
+@import './components/button.scss';
+
+// concrete components
+@import './components/dataset.scss';
