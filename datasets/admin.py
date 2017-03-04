@@ -4,7 +4,7 @@ from .models import Dataset
 
 
 class DatasetAdmin(admin.ModelAdmin):
-    list_display = ('name', 'data_file')
+    list_display = ('name', 'tags')
     search_fields = ('name', 'description', 'tags')
 
 
