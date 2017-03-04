@@ -1,0 +1,11 @@
+<h1>{{ object }}</h1>
+
+{{ object.url }}</br>
+{{ object.description }}</br>
+{{ object.tags }}
+
+<h2>CSV Download:</h2>
+<a href="{{ object.data_file.url }}">{{ object.data_file.url }}</a>
+
+<h2>Quelle:</h2>
+{{ object.source_url|urlize }}
