@@ -16,7 +16,7 @@ class Dataset(models.Model):
     id = models.UUIDField(primary_key=True, editable=False, default=uuid.uuid4)
     name = models.CharField(max_length=256)
     slug = models.SlugField(max_length=256, editable=False)
-    csv_file = models.FileField(upload_to='data')
+    csv_file = models.FileField(upload_to='data', max_length=500)
     tags_raw = models.CharField(max_length=256, blank=True, null=True,
                                 help_text=_('Enter comma seperated tags'))
     description = models.TextField(blank=True, null=True)
