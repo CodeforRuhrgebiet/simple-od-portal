@@ -1,0 +1,19 @@
+{% extends 'theme/base.html' %}
+
+{% load i18n %}
+
+{% block title %}
+  {% trans 'All datasets' %}
+{% endblock %}
+
+{% block main %}
+
+<h1>{% trans 'All datasets' %}</h1>
+
+<ul class="datasets__list">
+  {% for object in object_list %}
+  <li class="datasets__list-item"><a href="{{ object.get_absolute_url }}">{{ object }}</a></li>
+  {% endfor %}
+</ul>
+
+{% endblock %}

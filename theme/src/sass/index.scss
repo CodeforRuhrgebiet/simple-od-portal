@@ -1,0 +1,12 @@
+// reset
+body {
+  margin: 0;
+  padding: 0;
+}
+
+// vars
+@import 'vars';
+
+// base
+@import './components/page.scss';
+

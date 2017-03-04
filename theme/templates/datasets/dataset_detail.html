@@ -1,0 +1,30 @@
+{% extends 'theme/base.html' %}
+
+{% load i18n %}
+
+{% block title %}{% trans 'Dataset' %} "{{ object }}"{% endblock %}
+
+{% block main %}
+
+<section class="dataset">
+
+  <h1 class="dataset__name">{{ object }}</h1>
+
+  {% if object.tags %}
+    <ul class="dataset__tag-list">
+    {% for tag in object.tags %}
+      <li class="dataset__tag-list-item">{{ tag }}</li>
+    {% endfor %}
+  {% endif %}
+
+  {% if object.description %}
+    <p class="dataset__description">{{ object.description }}</p>
+  {% endif %}
+
+  <a class="dataset__download-url" href="{{ object.data_file.url }}">{% trans 'Download as CSV' %}</a>
+
+  <a class="dataset__source-url">{{ object.source_url|urlize }}</a>
+
+</section>
+
+{% endblock %}

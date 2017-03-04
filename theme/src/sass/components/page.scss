@@ -1,0 +1,17 @@
+.header, .main, .footer {
+
+  padding: 30px;
+
+}
+
+.header {
+
+  background-color: $gray-light;
+
+  &__title {
+
+    font-family: $font-family-mono;
+
+  }
+
+}

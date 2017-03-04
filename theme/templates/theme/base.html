@@ -1,0 +1,25 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{% block title %}Simple Open Data Portal{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" type="text/css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body>
+    <header class="header">
+      <h3 class="header__title">essen.openruhr.de</h3>
+      <div class="header__description">Ein ganz einfaches Open Data Portal. Weil Essen kein offizielles hat.</div>
+    </header>
+    <main role="main" class="main">
+      {% block main %}{% endblock %}
+    </main>
+    <footer role="footer" class="footer">
+      <div class="footer__credits">
+        <a href="">@codeforruhr</a>
+      </div>
+    </footer>
+  </body>
+</html>
