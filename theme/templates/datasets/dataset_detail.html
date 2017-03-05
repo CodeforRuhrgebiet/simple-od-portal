@@ -3,6 +3,9 @@
 {% load i18n %}
 
 {% block title %}{% trans 'Dataset' %} "{{ object }}"{% endblock %}
+{% if object.description %}
+  {% block description %}{{ object.description }}{% endblock %}
+{% endif %}
 
 {% block main %}
 
