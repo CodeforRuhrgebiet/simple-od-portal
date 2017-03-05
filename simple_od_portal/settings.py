@@ -111,6 +111,11 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
+DATASETS_URL = '/data/'
+DATASETS_ROOT = os.path.join(BASE_DIR, 'datasets', 'source')
+DATASETS_INDEX = 'datasets.yaml'
+
+
 try:
     from .local_settings import *  # noqa
 except ImportError:
