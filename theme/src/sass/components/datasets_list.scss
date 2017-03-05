@@ -1,0 +1,58 @@
+.datasets {
+
+  &__list {
+
+    margin: 0;
+    padding: 0;
+
+  }
+
+  &__item {
+
+    list-style: none;
+    display: block;
+    padding: $padding-base / 2;
+    border: 1px solid $gray;
+    margin-bottom: $padding-base / 2;
+    @include transition( background-color );
+
+    &:hover {
+
+      @include transition( background-color );
+      background-color: lighten($color-main, 55%);
+
+    }
+
+    &-link {
+
+      color: $color-main;
+      font-weight: bold;
+      font-size: 1.3em;
+      text-decoration: none;
+      @include transition( text-decoration );
+
+      &:hover {
+
+        text-decoration: underline;
+        @include transition( text-decoration );
+
+      }
+
+    }
+
+    .dataset__tag-list {
+
+      margin-bottom: $padding-base/4;
+
+      &-item {
+
+        font-size: .8em;
+        padding: 3px;
+
+      }
+
+    }
+
+  }
+
+}
