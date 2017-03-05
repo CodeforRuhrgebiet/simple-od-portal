@@ -1,7 +1,7 @@
 # simple-od-portal
 A really simple Open Data portal for cities that don't have one.
 
-# usage with docker
+# development setup with docker
 
 1. run migrations `docker-compose run web python manage.py migrate`
 
