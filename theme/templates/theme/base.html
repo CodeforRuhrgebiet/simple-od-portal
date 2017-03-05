@@ -7,7 +7,14 @@
     <meta name="viewport" content="width=device-width" />
     <title>{% block title %}Simple Open Data Portal{% endblock %}</title>
     <meta name="description" content="{% block description %}Ein ganz einfaches inoffizielles Offenes Datenportal. Weil die Stadt Essen keines hat.{% endblock %}">
-    <link rel="stylesheet" href="{% static 'css/main.css' %}" type="text/css" media="screen" title="no title" charset="utf-8">
+    <meta property="og:url" content="http://bits.blogs.nytimes.com/2011/12/08/a-twitter-for-my-sister/" />
+    <meta property="og:title" content="{% block title %}Simple Open Data Portal{% endblock %}" />
+    <meta property="og:description" content="{% block description %}Ein ganz einfaches inoffizielles Offenes Datenportal. Weil die Stadt Essen keines hat.{% endblock %}" />
+    <meta property="og:image" content="{% static "/images/social-media-teaser.png" %}" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@CodeforRuhr" />
+    <meta name="twitter:creator" content="@CodeforRuhr" />
+   <link rel="stylesheet" href="{% static 'css/main.css' %}" type="text/css" media="screen" title="no title" charset="utf-8">
   </head>
   <body>
     <header class="header">
