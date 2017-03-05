@@ -2,7 +2,22 @@
 
   &__download-url {
 
-    background-color: $color-accent1;
+    margin-top: $padding-base;
+    background-color: $color-main;
+    color: $white;
+
+    &:hover {
+
+      background-color: lighten($color-main, 10%);
+
+    }
+
+  }
+
+  &__source-name {
+
+    color: $gray;
+    font-style: italic;
 
   }
 

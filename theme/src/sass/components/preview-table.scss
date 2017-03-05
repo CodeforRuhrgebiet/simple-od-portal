@@ -1,0 +1,25 @@
+.dataset__preview {
+
+  font-size: 1em;
+  border-collapse: collapse;
+
+  &, th, td {
+
+    border: 1px solid $gray;
+
+  }
+
+  th {
+
+    background-color: $gray-light;
+    text-align: left;
+
+  }
+
+  th, td {
+
+    padding: 15px;
+
+  }
+
+}

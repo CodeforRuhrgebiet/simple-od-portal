@@ -1,7 +1,21 @@
 .button {
 
+  display: inline-block;
   background-color: $gray-light;
-  border: 1px solid $gray;
   padding: 10px;
+  @include transition( background-color );
+
+  &:hover {
+
+    @include transition( background-color );
+    background-color: darken($gray-light, 10%);
+
+  }
+
+  &--link {
+
+    color: $black;
+
+  }
 
 }

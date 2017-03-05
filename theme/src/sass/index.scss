@@ -1,11 +1,9 @@
 // reset
-body {
-  margin: 0;
-  padding: 0;
-}
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css');
 
 // vars
 @import 'vars';
+@import 'mixins';
 
 // base
 @import './components/page.scss';
@@ -15,3 +13,5 @@ body {
 
 // concrete components
 @import './components/dataset.scss';
+@import './components/tags.scss';
+@import './components/preview-table.scss';

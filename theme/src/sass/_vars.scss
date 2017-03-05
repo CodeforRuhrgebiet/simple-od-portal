@@ -1,18 +1,25 @@
 // colors
 $black: #1a1a1a;
 $white: white;
-$gray: gray;
+$gray: lighten(gray, 20%);
 $gray-light: lighten($gray, 20%);
 $color-main: brown;
 $color-accent1: steelblue;
 
+// padding/margin
+$padding-base: 50px;
+
 // typo
+@import url('https://fonts.googleapis.com/css?family=Work+Sans');
 $font-family-mono: monospace;
-$font-family-sans: sans-serif;
+$font-family-sans: 'Work Sans', sans-serif;
 $font-family-serif: serif;
 
 $font-heading: $font-family-sans;
 $font-body: $font-family-sans;
 
-$font-seize-base: 1em;
+$font-size-base: 1.2em;
 $line-height-base: 1.5em;
+
+// transitions
+$transition-duration: .2s;

@@ -1,0 +1,6 @@
+@mixin transition($attribute) {
+  -webkit-transition: $attribute $transition-duration;
+     -moz-transition: $attribute $transition-duration;
+      -ms-transition: $attribute $transition-duration;
+          transition: $attribute $transition-duration;
+}

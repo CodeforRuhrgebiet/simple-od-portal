@@ -1,6 +1,14 @@
 .header, .main, .footer {
 
-  padding: 30px;
+  font-family: $font-family-sans;
+  padding: $padding-base;
+  font-size: $font-size-base;
+
+  p {
+
+    line-height: $line-height-base;
+
+  }
 
 }
 

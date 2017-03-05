@@ -11,22 +11,32 @@
 
 <section class="dataset">
 
-  <h1 class="dataset__name">{{ object }}</h1>
-
   {% if object.tags %}
     <ul class="dataset__tag-list">
     {% for tag in object.tags %}
       <li class="dataset__tag-list-item">{{ tag }}</li>
     {% endfor %}
+    </ul>
   {% endif %}
+
+  <h1 class="dataset__name">{{ object }}</h1>
+
+  <p class="dataset__source-name">{% trans 'Source' %}: {{ object.source_name }}</p>
 
   {% if object.description %}
     <p class="dataset__description">{{ object.description }}</p>
   {% endif %}
 
-  <a class="button dataset__download-url" href="{{ object.data_file.url }}">{% trans 'Download as CSV' %}</a>
+  {% if object.preview %}
+    <h2>{% trans 'Preview' %}</h2>
+    {% include './includes/dataset_preview.html' with header=object.preview.header subset=object.preview.subset %}
+  {% endif %}
 
-  <a class="button dataset__source-url" href="{{ object.source_url }}">{% trans 'Source' %}</a>
+  <a class="button button--link dataset__download-url" href="{{ object.download_url }}">{% trans 'Download as CSV' %}</a>
+
+  {% if object.source_url %}
+    <a class="button button--link dataset__source-url" href="{{ object.source_url }}">{% trans 'Source' %}</a>
+  {% endif %}
 
 </section>
 
