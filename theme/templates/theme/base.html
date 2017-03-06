@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width" />
     <title>{% block title %}Simple Open Data Portal{% endblock %}</title>
     <meta name="description" content="{% block meta-description %}Ein ganz einfaches inoffizielles Offenes Datenportal. Weil die Stadt Essen keines hat.{% endblock %}">
-    <meta property="og:url" content="http://bits.blogs.nytimes.com/2011/12/08/a-twitter-for-my-sister/" />
+    <meta property="og:url" content="{{ request.get_full_path }}" />
     <meta property="og:title" content="{% block og-title %}Simple Open Data Portal{% endblock %}" />
     <meta property="og:description" content="{% block description %}Ein ganz einfaches inoffizielles Offenes Datenportal. Weil die Stadt Essen keines hat.{% endblock %}" />
     <meta property="og:image" content="{% static "/images/social-media-teaser.png" %}" />
