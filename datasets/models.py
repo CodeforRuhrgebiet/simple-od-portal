@@ -1,7 +1,6 @@
 from __future__ import unicode_literals
 from django.utils.encoding import python_2_unicode_compatible
 
-import csv
 import os
 import uuid
 
@@ -68,10 +67,10 @@ class Dataset(models.Model):
     def get_preview(self):
         try:
             with open(self.file_path, encoding='utf-8') as f:
-                rows = [r for r in csv.DictReader(f)]
+                lines = f.readlines()[:6]
             return {
-                'header': rows[0].keys(),
-                'subset': [r.values() for r in rows[:5]]
+                'header': lines[0].split(','),
+                'subset': [l.split(',') for l in lines[1:]]
             }
         except (UnicodeDecodeError, UnicodeEncodeError):
             return False
