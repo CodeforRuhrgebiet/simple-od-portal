@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width" />
     <title>{% block title %}Simple Open Data Portal{% endblock %}</title>
     <meta name="description" content="{% block meta-description %}Ein ganz einfaches inoffizielles Offenes Datenportal. Weil die Stadt Essen keines hat.{% endblock %}">
-    <meta property="og:url" content="{{ request.get_full_path }}" />
+    <meta property="og:url" content="{{ request.build_absolute_uri }}{{ object.get_absolute_url }}" />
     <meta property="og:title" content="{% block og-title %}Simple Open Data Portal{% endblock %}" />
     <meta property="og:description" content="{% block description %}Ein ganz einfaches inoffizielles Offenes Datenportal. Weil die Stadt Essen keines hat.{% endblock %}" />
     <meta property="og:image" content="{% static "/images/social-media-teaser.png" %}" />
