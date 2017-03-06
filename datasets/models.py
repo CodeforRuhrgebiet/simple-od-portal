@@ -62,7 +62,7 @@ class Dataset(models.Model):
             with open(self.file_path, encoding='utf-8') as f:
                 content = f.read()
             return content
-        except UnicodeEncodeError as e:
+        except (UnicodeDecodeError, UnicodeEncodeError) as e:
             return str(e)
 
     def get_preview(self):
@@ -73,7 +73,7 @@ class Dataset(models.Model):
                 'header': rows[0].keys(),
                 'subset': [r.values() for r in rows[:5]]
             }
-        except UnicodeEncodeError:
+        except (UnicodeDecodeError, UnicodeEncodeError):
             return False
 
     @classmethod
