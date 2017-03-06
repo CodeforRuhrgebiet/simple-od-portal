@@ -2,8 +2,10 @@
 
   font-size: 1em;
   border-collapse: collapse;
+  display: block;
+  overflow-x: auto;
 
-  &, th, td {
+  th, td {
 
     border: 1px solid $gray;
 
@@ -19,6 +21,13 @@
   th, td {
 
     padding: 15px;
+
+    @media (max-width: 760px) {
+
+      padding: 5px;
+      font-size: .8em;
+
+    }
 
   }
 
