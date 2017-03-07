@@ -21,7 +21,7 @@
     {% endif %}
     <a class="datasets__item-link" href="{{ object.get_absolute_url }}">{{ object }}</a>
     {% if object.description %}
-      <p class="datasets__item-description">{{ object.description }}</p>
+      <p class="datasets__item-description">{{ object.description | truncatewords:20 }}</p>
     {% endif %}
   </li>
   {% endfor %}
