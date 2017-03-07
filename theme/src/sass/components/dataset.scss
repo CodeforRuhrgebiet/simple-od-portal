@@ -1,5 +1,7 @@
 .dataset {
 
+  @include word-wrap();
+
   &__download-url {
 
     margin-top: $padding-base;
