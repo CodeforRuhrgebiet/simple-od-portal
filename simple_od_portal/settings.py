@@ -95,6 +95,7 @@ DATABASES = {
 try:
     import django_cache_url
     CACHES = {'default': django_cache_url.parse(get_env('DJANGO_CACHE_URL'))}
+    CACHES['default']['TIMEOUT'] = None
 except (ImportError, TypeError):
     pass
 
