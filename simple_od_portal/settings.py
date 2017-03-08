@@ -12,6 +12,10 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 
 import os
 
+# get environment variables for deployment
+def get_env(x, y=None):
+    return os.environ.get(x, y)
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -20,12 +24,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'v1oe_0j#c@itz8l5m0cf%+esw=1^#_ostl&b*me5rtvdi=w-*v'
+SECRET_KEY = get_env('DJANGO_SECRET_KEY', 'v1oe_0j#c@itz8l5m0cf%+esw=1^#_ostl&b*me5rtvdi=w-*v')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = get_env('DJANGO_DEBUG', 'true') == 'true'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [get_env('DJANGO_ALLOWED_HOSTS'), '*']
 
 
 # Application definition
@@ -87,6 +91,12 @@ DATABASES = {
 }
 
 
+# Caching
+try:
+    import django_cache_url
+    CACHES = {'default': django_cache_url.parse(get_env('DJANGO_CACHE_URL'))}
+except ImportError:
+    pass
 
 
 # Internationalization
@@ -120,12 +130,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 DATASETS_URL = '/data/'
 DATASETS_ROOT = os.path.join(BASE_DIR, 'datasets', 'source')
 DATASETS_INDEX = 'datasets.yaml'
-
-
-try:
-    from .local_settings import *  # noqa
-except ImportError:
-    pass
 
 
 if not DEBUG:
