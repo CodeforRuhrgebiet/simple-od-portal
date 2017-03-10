@@ -12,7 +12,7 @@ Use your preferred python packaging management / virtualization system. Recommen
 
 Then, follow these steps to get the app running (inside your python environment):
 
-`pip install -r requirements.txt.`
+`pip install -r requirements.txt`
 
 `./manage.py migrate`
 
