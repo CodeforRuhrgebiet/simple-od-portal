@@ -3,68 +3,20 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-10 11:55+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"POT-Creation-Date: 2017-03-10 13:01+0100\n"
+"PO-Revision-Date: 2017-03-10 13:03+0100\n"
+"Last-Translator: Martin Schurig <martin@schurig.pw>\n"
+"Language-Team: \n"
+"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-
-#: datasets/models.py:19 datasets/models.py:40
-msgid "Created at"
-msgstr "Erstellt am"
-
-#: datasets/models.py:20 datasets/models.py:41
-msgid "Name"
-msgstr ""
-
-#: datasets/models.py:21 datasets/models.py:42
-msgid "Slug"
-msgstr ""
-
-#: datasets/models.py:43
-msgid "File path"
-msgstr ""
-
-#: datasets/models.py:47
-msgid "Source name"
-msgstr "Name der Quelle"
-
-#: datasets/models.py:48
-msgid "Source url"
-msgstr "URL zur Quelle"
-
-#: datasets/models.py:49
-msgid "Published date"
-msgstr "Veröffentlichungs-Datum"
-
-#: datasets/models.py:50
-msgid "File content"
-msgstr ""
-
-#: datasets/models.py:51
-msgid "Tags"
-msgstr ""
-
-#: datasets/models.py:52
-msgid "Description"
-msgstr ""
-
-#: datasets/urls.py:15
-msgid "search"
-msgstr "suche"
-
-#: simple_od_portal/urls.py:30
-msgid "datasets"
-msgstr "datensaetze"
+"X-Generator: Poedit 1.8.9\n"
 
 #: theme/templates/datasets/dataset_detail.html:5
 #: theme/templates/datasets/dataset_detail.html:6
@@ -90,23 +42,37 @@ msgstr "Als CSV runterladen"
 msgid "All datasets"
 msgstr "Alle Datensätze"
 
-#: theme/templates/datasets/dataset_search.html:9
+#: theme/templates/datasets/dataset_list.html:5
+#: theme/templates/datasets/dataset_list.html:6
+#: theme/templates/datasets/dataset_search.html:5
+#: theme/templates/datasets/dataset_search.html:6
+#: theme/templates/datasets/tag_detail.html:5
+#: theme/templates/datasets/tag_detail.html:6
+#: theme/templates/datasets/tag_list.html:5
+#: theme/templates/datasets/tag_list.html:6
+msgid "Open Data for Essen"
+msgstr "Offene Daten für Essen"
+
+#: theme/templates/datasets/dataset_search.html:5
+#: theme/templates/datasets/dataset_search.html:6
+msgid "Search results for"
+msgstr "Suchergebnisse für"
+
+#: theme/templates/datasets/dataset_search.html:12
 msgid "Search results"
 msgstr "Suchergebnisse"
 
-#: theme/templates/datasets/dataset_search.html:9
+#: theme/templates/datasets/dataset_search.html:12
 msgid "for"
 msgstr "für"
 
-#: theme/templates/datasets/dataset_search.html:14
+#: theme/templates/datasets/dataset_search.html:17
 msgid "No results for"
 msgstr "Keine Ergebnisse für"
 
-#: theme/templates/datasets/dataset_search.html:18
-#, fuzzy
+#: theme/templates/datasets/dataset_search.html:21
 msgid "Please use a search term with at least three characters."
-msgstr ""
-"Bitte verwende einen Sichbegriff, der mindestens drei Zeichen lang ist."
+msgstr "Bitte verwende einen Suchbegriff, der mindestens drei Zeichen lang ist."
 
 #: theme/templates/datasets/includes/search_form.html:5
 msgid "Search for"
@@ -127,3 +93,39 @@ msgstr "Datensätze mit Tag"
 #: theme/templates/datasets/tag_list.html:10
 msgid "All tags"
 msgstr "Alle Tags"
+
+#~ msgid "Created at"
+#~ msgstr "Erstellt am"
+
+#~ msgid "Name"
+#~ msgstr "Name"
+
+#~ msgid "Slug"
+#~ msgstr "Permalink"
+
+#~ msgid "File path"
+#~ msgstr "Dateipfad"
+
+#~ msgid "Source name"
+#~ msgstr "Name der Quelle"
+
+#~ msgid "Source url"
+#~ msgstr "URL zur Quelle"
+
+#~ msgid "Published date"
+#~ msgstr "Veröffentlichungs-Datum"
+
+#~ msgid "File content"
+#~ msgstr "Inhalt der Datei"
+
+#~ msgid "Tags"
+#~ msgstr "Suchwörter"
+
+#~ msgid "Description"
+#~ msgstr "Beschreibung"
+
+#~ msgid "search"
+#~ msgstr "suche"
+
+#~ msgid "datasets"
+#~ msgstr "datensaetze"
