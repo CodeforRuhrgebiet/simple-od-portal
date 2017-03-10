@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-10 09:57+0100\n"
+"POT-Creation-Date: 2017-03-10 11:00+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,51 +18,47 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: datasets/models.py:20
+#: datasets/models.py:20 datasets/models.py:41
 msgid "Created at"
 msgstr "Erstellt am"
 
-#: datasets/models.py:21
+#: datasets/models.py:21 datasets/models.py:42
 msgid "Name"
 msgstr ""
 
-#: datasets/models.py:22
+#: datasets/models.py:22 datasets/models.py:43
 msgid "Slug"
 msgstr ""
 
-#: datasets/models.py:23
+#: datasets/models.py:44
 msgid "File path"
 msgstr ""
 
-#: datasets/models.py:27
+#: datasets/models.py:48
 msgid "Source name"
 msgstr "Name der Quelle"
 
-#: datasets/models.py:28
+#: datasets/models.py:49
 msgid "Source url"
 msgstr "URL zur Quelle"
 
-#: datasets/models.py:29
+#: datasets/models.py:50
 msgid "Published date"
 msgstr "Veröffentlichungs-Datum"
 
-#: datasets/models.py:30
+#: datasets/models.py:51
 msgid "File content"
 msgstr ""
 
-#: datasets/models.py:31
+#: datasets/models.py:52
 msgid "Tags"
 msgstr ""
 
-#: datasets/models.py:32
-msgid "Enter comma seperated tags"
-msgstr ""
-
-#: datasets/models.py:33
+#: datasets/models.py:53
 msgid "Description"
 msgstr ""
 
-#: datasets/urls.py:9
+#: datasets/urls.py:15
 msgid "search"
 msgstr "suche"
 
@@ -75,16 +71,16 @@ msgstr "datensaetze"
 msgid "Dataset"
 msgstr "Datensatz"
 
-#: theme/templates/datasets/dataset_detail.html:26
-#: theme/templates/datasets/dataset_detail.html:40
+#: theme/templates/datasets/dataset_detail.html:28
+#: theme/templates/datasets/dataset_detail.html:42
 msgid "Source"
 msgstr "Quelle"
 
-#: theme/templates/datasets/dataset_detail.html:33
+#: theme/templates/datasets/dataset_detail.html:35
 msgid "Preview"
 msgstr "Vorschau"
 
-#: theme/templates/datasets/dataset_detail.html:37
+#: theme/templates/datasets/dataset_detail.html:39
 msgid "Download as CSV"
 msgstr "Als CSV runterladen"
 
@@ -94,6 +90,23 @@ msgstr "Als CSV runterladen"
 msgid "All datasets"
 msgstr "Alle Datensätze"
 
+#: theme/templates/datasets/dataset_search.html:9
+msgid "Search results"
+msgstr "Suchergebnisse"
+
+#: theme/templates/datasets/dataset_search.html:9
+msgid "for"
+msgstr "für"
+
+#: theme/templates/datasets/dataset_search.html:14
+msgid "No results for"
+msgstr "Keine Ergebnisse für"
+
+#: theme/templates/datasets/dataset_search.html:18
+msgid "Please use a search term with at least four characters."
+msgstr ""
+"Bitte verwende einen Sichbegriff, der mindestens vier Zeichen lang ist."
+
 #: theme/templates/datasets/includes/search_form.html:5
 msgid "Search for"
 msgstr "Suche nach"
@@ -102,18 +115,14 @@ msgstr "Suche nach"
 msgid "Search"
 msgstr "Suche"
 
-#: theme/templates/datasets/search_results.html:9
-msgid "Search results"
-msgstr "Suchergebnisse"
+#: theme/templates/datasets/tag_detail.html:5
+#: theme/templates/datasets/tag_detail.html:6
+#: theme/templates/datasets/tag_detail.html:10
+msgid "Datasets with tag"
+msgstr "Datensätze mit Tag"
 
-#: theme/templates/datasets/search_results.html:9
-msgid "for"
-msgstr "für"
-
-#: theme/templates/datasets/search_results.html:14
-msgid "No results for"
-msgstr "Keine Ergebnisse für"
-
-#: theme/templates/datasets/search_results.html:18
-msgid "Please use a search term with at least four characters."
-msgstr "Bitte verwende einen Sichbegriff, der mindestens vier Zeichen lang ist."
+#: theme/templates/datasets/tag_list.html:5
+#: theme/templates/datasets/tag_list.html:6
+#: theme/templates/datasets/tag_list.html:10
+msgid "All tags"
+msgstr "Alle Tags"
