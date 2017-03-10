@@ -1,0 +1,27 @@
+{% extends './dataset_list.html' %}
+
+{% load i18n %}
+
+{% block main %}
+
+{% with request.GET.q as q %}
+
+<h1>{% trans 'Search results' %}{% if q %} {% trans 'for' %} <code>{{ q }}</code>{% endif %}</h1>
+
+  {% if not object_list %}
+
+  {% if q %}
+    <p>{% trans 'No results for' %} {{ q }}.</p>
+  {% endif %}
+
+  {% if q|length < 4 %}
+    <p>{% trans 'Please use a search term with at least four characters.' %}</p>
+  {% endif %}
+
+  {% endif %}
+
+{% endwith %}
+
+{% include './includes/dataset_list.html' %}
+
+{% endblock %}

@@ -1,0 +1,8 @@
+{% load i18n %}
+
+<section class="search-form">
+  <form action="{% url 'dataset-search' %}" method="get" accept-charset="utf-8">
+    <input type="text" name="q" id="q" placeholder="{% trans 'Search for' %}..." />
+    <button class="button button--submit" type="submit">{% trans 'Search' %}</button>
+  </form>
+</section>

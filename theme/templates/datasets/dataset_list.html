@@ -9,22 +9,6 @@
 
 <h1>{% trans 'All datasets' %}</h1>
 
-<ul class="datasets__list">
-  {% for object in object_list %}
-  <li class="datasets__item">
-    {% if object.tags %}
-      <ul class="dataset__tag-list">
-      {% for tag in object.tags %}
-        <li class="dataset__tag-list-item">{{ tag }}</li>
-      {% endfor %}
-      </ul>
-    {% endif %}
-    <a class="datasets__item-link" href="{{ object.get_absolute_url }}">{{ object }}</a>
-    {% if object.description %}
-      <p class="datasets__item-description">{{ object.description | truncatewords:20 }}</p>
-    {% endif %}
-  </li>
-  {% endfor %}
-</ul>
+{% include './includes/dataset_list.html' %}
 
 {% endblock %}
