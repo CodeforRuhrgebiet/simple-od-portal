@@ -15,7 +15,7 @@ class DatasetDetailView(DetailView):
 
 class DatasetSearchView(ListView):
     model = Dataset
-    template_name = 'datasets/search_results.html'
+    template_name = 'datasets/dataset_search.html'
 
     def get_queryset(self):
         q = self.request.GET.get('q', None)
