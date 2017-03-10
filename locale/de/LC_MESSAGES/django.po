@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-05 13:38+0100\n"
+"POT-Creation-Date: 2017-03-10 09:57+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -62,7 +62,11 @@ msgstr ""
 msgid "Description"
 msgstr ""
 
-#: simple_od_portal/urls.py:27
+#: datasets/urls.py:9
+msgid "search"
+msgstr "suche"
+
+#: simple_od_portal/urls.py:30
 msgid "datasets"
 msgstr "datensaetze"
 
@@ -89,3 +93,27 @@ msgstr "Als CSV runterladen"
 #: theme/templates/datasets/dataset_list.html:10
 msgid "All datasets"
 msgstr "Alle Datensätze"
+
+#: theme/templates/datasets/includes/search_form.html:5
+msgid "Search for"
+msgstr "Suche nach"
+
+#: theme/templates/datasets/includes/search_form.html:6
+msgid "Search"
+msgstr "Suche"
+
+#: theme/templates/datasets/search_results.html:9
+msgid "Search results"
+msgstr "Suchergebnisse"
+
+#: theme/templates/datasets/search_results.html:9
+msgid "for"
+msgstr "für"
+
+#: theme/templates/datasets/search_results.html:14
+msgid "No results for"
+msgstr "Keine Ergebnisse für"
+
+#: theme/templates/datasets/search_results.html:18
+msgid "Please use a search term with at least four characters."
+msgstr "Bitte verwende einen Sichbegriff, der mindestens vier Zeichen lang ist."
