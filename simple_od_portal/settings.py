@@ -210,3 +210,12 @@ LOGGING = {
         },
     }
 }
+
+
+if DEBUG:
+    # disable caching
+    CACHES = {
+        'default': {
+            'BACKEND': 'django.core.cache.backends.dummy.DummyCache',
+        }
+    }
