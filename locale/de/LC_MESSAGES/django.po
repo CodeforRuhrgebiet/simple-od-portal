@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-10 11:00+0100\n"
+"POT-Creation-Date: 2017-03-10 11:55+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,43 +18,43 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: datasets/models.py:20 datasets/models.py:41
+#: datasets/models.py:19 datasets/models.py:40
 msgid "Created at"
 msgstr "Erstellt am"
 
-#: datasets/models.py:21 datasets/models.py:42
+#: datasets/models.py:20 datasets/models.py:41
 msgid "Name"
 msgstr ""
 
-#: datasets/models.py:22 datasets/models.py:43
+#: datasets/models.py:21 datasets/models.py:42
 msgid "Slug"
 msgstr ""
 
-#: datasets/models.py:44
+#: datasets/models.py:43
 msgid "File path"
 msgstr ""
 
-#: datasets/models.py:48
+#: datasets/models.py:47
 msgid "Source name"
 msgstr "Name der Quelle"
 
-#: datasets/models.py:49
+#: datasets/models.py:48
 msgid "Source url"
 msgstr "URL zur Quelle"
 
-#: datasets/models.py:50
+#: datasets/models.py:49
 msgid "Published date"
 msgstr "Veröffentlichungs-Datum"
 
-#: datasets/models.py:51
+#: datasets/models.py:50
 msgid "File content"
 msgstr ""
 
-#: datasets/models.py:52
+#: datasets/models.py:51
 msgid "Tags"
 msgstr ""
 
-#: datasets/models.py:53
+#: datasets/models.py:52
 msgid "Description"
 msgstr ""
 
@@ -103,9 +103,10 @@ msgid "No results for"
 msgstr "Keine Ergebnisse für"
 
 #: theme/templates/datasets/dataset_search.html:18
-msgid "Please use a search term with at least four characters."
+#, fuzzy
+msgid "Please use a search term with at least three characters."
 msgstr ""
-"Bitte verwende einen Sichbegriff, der mindestens vier Zeichen lang ist."
+"Bitte verwende einen Sichbegriff, der mindestens drei Zeichen lang ist."
 
 #: theme/templates/datasets/includes/search_form.html:5
 msgid "Search for"

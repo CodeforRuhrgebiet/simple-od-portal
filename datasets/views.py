@@ -19,7 +19,7 @@ class DatasetSearchView(ListView):
 
     def get_queryset(self):
         q = self.request.GET.get('q', None)
-        if q and len(q) > 3:
+        if q and len(q) > 2:
             qs = super().get_queryset().filter(
                 Q(name__icontains=q) |
                 Q(tags__name__icontains=q) |

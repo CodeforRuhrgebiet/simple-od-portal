@@ -14,8 +14,8 @@
     <p>{% trans 'No results for' %} {{ q }}.</p>
   {% endif %}
 
-  {% if q|length < 4 %}
-    <p>{% trans 'Please use a search term with at least four characters.' %}</p>
+  {% if q|length < 3 %}
+    <p>{% trans 'Please use a search term with at least three characters.' %}</p>
   {% endif %}
 
   {% endif %}
