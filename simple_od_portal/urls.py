@@ -21,7 +21,7 @@ from django.contrib.flatpages.sitemaps import FlatPageSitemap
 from django.contrib.sitemaps.views import sitemap
 from django.utils.translation import ugettext_lazy as _
 
-from datasets.sitemaps import DatasetSitemap
+from datasets.sitemaps import DatasetSitemap, TagsSitemap
 from datasets.views import index
 
 
@@ -32,7 +32,8 @@ urlpatterns = [
     url(r'^sitemap\.xml$', sitemap, {
         'sitemaps': {
             'flatpages': FlatPageSitemap,
-            'datasets': DatasetSitemap
+            'datasets': DatasetSitemap,
+            'tags': TagsSitemap
         }
     }, name='django.contrib.sitemaps.views.sitemap'),
 ]

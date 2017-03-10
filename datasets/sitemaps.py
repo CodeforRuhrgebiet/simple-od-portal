@@ -1,6 +1,6 @@
 from django.contrib.sitemaps import Sitemap
 
-from .models import Dataset
+from .models import Dataset, Tag
 
 
 class DatasetSitemap(Sitemap):
@@ -12,3 +12,8 @@ class DatasetSitemap(Sitemap):
 
     def lastmod(self, obj):
         return obj.created_ts
+
+
+class TagsSitemap(DatasetSitemap):
+    def items(self):
+        return Tag.objects.all()

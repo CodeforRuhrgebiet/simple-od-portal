@@ -14,6 +14,27 @@ from .utils import slugify
 
 
 @python_2_unicode_compatible
+class Tag(models.Model):
+    id = models.UUIDField(primary_key=True, editable=False, default=uuid.uuid4)
+    created_ts = models.DateTimeField(_('Created at'), auto_now_add=True)
+    name = models.CharField(_('Name'), max_length=500, unique=True, editable=False)
+    slug = models.SlugField(_('Slug'), max_length=500, unique=True, editable=False)
+
+    class Meta:
+        ordering = ('name',)
+
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.name)
+        super().save(*args, **kwargs)
+
+    def __str__(self):
+        return self.name
+
+    def get_absolute_url(self):
+        return reverse('tag-detail', kwargs={'slug': self.slug})
+
+
+@python_2_unicode_compatible
 class Dataset(models.Model):
     id = models.UUIDField(primary_key=True, editable=False, default=uuid.uuid4)
     created_ts = models.DateTimeField(_('Created at'), auto_now_add=True)
@@ -27,9 +48,11 @@ class Dataset(models.Model):
     source_url = models.URLField(_('Source url'), blank=True, null=True)
     published_date = models.DateField(_('Published date'), blank=True, null=True)
     file_content = models.TextField(_('File content'), editable=False)
-    tags_raw = models.CharField(_('Tags'), max_length=256, blank=True, null=True,
-                                help_text=_('Enter comma seperated tags'))
+    tags = models.ManyToManyField(Tag, verbose_name=_('Tags'), related_name='datasets')
     description = models.TextField(_('Description'), blank=True, null=True)
+
+    class Meta:
+        ordering = ('name',)
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.name)
@@ -41,12 +64,6 @@ class Dataset(models.Model):
 
     def get_absolute_url(self):
         return reverse('dataset-detail', kwargs={'slug': self.slug})
-
-    @cached_property
-    def tags(self):
-        if self.tags_raw:
-            return self.tags_raw.split(',')
-        return []
 
     @cached_property
     def download_url(self):
@@ -86,9 +103,11 @@ class Dataset(models.Model):
                 file_path=os.path.join(settings.DATASETS_ROOT, data['file']),
                 file_path_relative=data['file'],
                 source_name=data['source'],
-                tags_raw=', '.join(data.get('tags', [])),
                 description=data.get('description', None),
                 source_url=data.get('url', None),
                 published_date=data.get('pub_date', None)
             )
             dataset.save()
+            for tag_name in data.get('tags'):
+                tag = Tag.objects.get_or_create(name=tag_name)[0]
+                dataset.tags.add(tag)

@@ -1,0 +1,14 @@
+{% extends 'theme/base.html' %}
+
+{% load i18n %}
+
+{% block title %}{% trans 'Datasets with tag' %} "{{ object }}"{% endblock %}
+{% block og-title %}{% trans 'Datasets with tag' %} "{{ object }}"{% endblock %}
+
+{% block main %}
+
+<h1>{% trans 'Datasets with tag' %} <span class="tag tag--inline">{{ object }}</h1>
+
+{% include './includes/dataset_list.html' with object_list=object.datasets.all %}
+
+{% endblock %}

@@ -10,7 +10,7 @@ class DatasetAdmin(admin.ModelAdmin):
     because the "source of truth" is the github repo!
     """
     date_hierarchy = 'created_ts'
-    list_display = ('name', 'tags')
+    list_display = ('name',)
     search_fields = ('name', 'description', 'tags', 'file_content')
     list_filter = ('published_date', 'created_ts')
 
