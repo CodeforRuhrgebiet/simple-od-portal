@@ -77,9 +77,10 @@ class Dataset(models.Model):
 
     @classmethod
     def create_from_yaml(cls, data, overwrite=False):
+        slug = slugify(data['name'])
         if overwrite:
-            cls.objects.filter(name=data['name']).delete()
-        if not cls.objects.filter(name=data['name']).exists():
+            cls.objects.filter(slug=slug).delete()
+        if not cls.objects.filter(slug=slug).exists():
             dataset = cls(
                 name=data['name'],
                 file_path=os.path.join(settings.DATASETS_ROOT, data['file']),
