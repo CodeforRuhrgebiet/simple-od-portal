@@ -17,6 +17,8 @@ from django.conf import settings
 from django.conf.urls import url, include
 from django.conf.urls.static import static
 from django.contrib import admin
+from django.contrib.flatpages.sitemaps import FlatPageSitemap
+from django.contrib.sitemaps.views import sitemap
 from django.utils.translation import ugettext_lazy as _
 
 from datasets.views import index
@@ -25,7 +27,12 @@ from datasets.views import index
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^%s/' % _('datasets'), include('datasets.urls')),
-    url(r'^$', index)
+    url(r'^$', index),
+    url(r'^sitemap\.xml$', sitemap, {
+        'sitemaps': {
+            'flatpages': FlatPageSitemap,
+        }
+    }, name='django.contrib.sitemaps.views.sitemap'),
 ]
 
 

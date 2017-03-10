@@ -1,0 +1,12 @@
+{% extends 'theme/base.html' %}
+
+{% load i18n %}
+
+{% block title %}{{ flatpage.title }}{% endblock %}
+{% block og-title %}{{ flatpage.title }}{% endblock %}
+
+{% block main %}
+
+{{ flatpage.content }}
+
+{% endblock %}
