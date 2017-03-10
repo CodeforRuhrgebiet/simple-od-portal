@@ -42,6 +42,17 @@ There is really simple `sass`-based css in `./theme/src/`
 
 Use the sass-compiler you prefer on your system. Only requirement: css output must be in `./theme/static/css/main.css`
 
+#### compile sass with `node-sass`
+
+`npm install -g node-sass`
+
+run watch mode:
+
+`sass --watch theme/src/sass/index.scss:theme/static/css/main.css`
+
+build css for production:
+
+`sass --style=compressed theme/src/sass/index.scss:theme/static/css/main.css`
 
 ## development setup with docker
 
