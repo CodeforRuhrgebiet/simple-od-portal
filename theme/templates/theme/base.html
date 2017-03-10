@@ -1,4 +1,4 @@
-{% load static %}
+{% load static flatpages %}
 
 <!DOCTYPE html>
 <html>
@@ -26,9 +26,17 @@
       {% block main %}{% endblock %}
     </main>
     <footer role="footer" class="footer">
-      <div class="footer__credits">
+      <section class="footer__navigation">
+        {% get_flatpages as flatpages %}
+        <ul>
+          {% for page in flatpages %}
+          <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </section>
+      <section class="footer__credits">
         <a href="https://twitter.com/codeforruhr" target="_blank">@codeforruhr</a>
-      </div>
+      </section>
     </footer>
   </body>
 </html>
