@@ -86,8 +86,8 @@ class Dataset(models.Model):
             with open(self.file_path, encoding='utf-8') as f:
                 lines = f.readlines()[:6]
             return {
-                'header': lines[0].split(','),
-                'subset': [l.split(',') for l in lines[1:]]
+                'header': [i.replace('"', '') for i in lines[0].split(',')],
+                'subset': [[i.replace('"', '') for i in l.split(',')] for l in lines[1:]]
             }
         except (UnicodeDecodeError, UnicodeEncodeError):
             return False
