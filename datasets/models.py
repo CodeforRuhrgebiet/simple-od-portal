@@ -48,7 +48,7 @@ class Dataset(models.Model):
     source_url = models.URLField(_('Source url'), blank=True, null=True)
     published_date = models.DateField(_('Published date'), blank=True, null=True)
     file_content = models.TextField(_('File content'), editable=False)
-    tags = models.ManyToManyField(Tag, verbose_name=_('Tags'), related_name='datasets')
+    tags = models.ManyToManyField(Tag, verbose_name=_('Tags'), related_name='datasets', editable=False)
     description = models.TextField(_('Description'), blank=True, null=True)
 
     class Meta:
