@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-10 16:06+0100\n"
-"PO-Revision-Date: 2017-03-10 16:07+0100\n"
+"POT-Creation-Date: 2017-03-10 16:51+0100\n"
+"PO-Revision-Date: 2017-03-10 16:51+0100\n"
 "Last-Translator: Martin Schurig <martin@schurig.pw>\n"
 "Language-Team: \n"
 "Language: de\n"
@@ -72,7 +72,15 @@ msgstr "Keine Ergebnisse für"
 
 #: theme/templates/datasets/dataset_search.html:21
 msgid "Please use a search term with at least three characters."
-msgstr "Bitte verwende einen Suchbegriff, der mindestens drei Zeichen lang ist."
+msgstr ""
+"Bitte verwende einen Suchbegriff, der mindestens drei Zeichen lang ist."
+
+#: theme/templates/datasets/includes/dataset_list.html:24
+#, python-format
+msgid "There is 1 dataset."
+msgid_plural "There are %(counter)s datasets."
+msgstr[0] "1 Datensatz im Datenportal."
+msgstr[1] "Bereits %(counter)s Datensätze im Datenportal."
 
 #: theme/templates/datasets/includes/search_form.html:5
 msgid "Search for"
@@ -93,6 +101,17 @@ msgstr "Datensätze mit Tag"
 #: theme/templates/datasets/tag_list.html:10
 msgid "All tags"
 msgstr "Alle Tags"
+
+#, fuzzy
+#~| msgid ""
+#~| "\n"
+#~| "  That will cost $ %(amount)s.\n"
+#~| "  "
+#~ msgid "That will cost %(amount)s."
+#~ msgstr "Test 123"
+
+#~ msgid "This string will have %(object_list|length)s inside."
+#~ msgstr "Lala"
 
 #~ msgid "Search results for"
 #~ msgstr "Suchergebnisse für"

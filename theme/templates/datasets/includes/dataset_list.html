@@ -18,4 +18,10 @@
   </li>
   {% endfor %}
 </ul>
+
+<p>
+  {% load i18n %}
+  {% blocktrans count counter=object_list|length %}There is 1 dataset.{% plural %}There are {{ counter }} datasets.{% endblocktrans %}
+</p>
+
 {% endif %}

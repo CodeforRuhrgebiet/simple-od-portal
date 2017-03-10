@@ -30,6 +30,7 @@
       <section class="footer__navigation">
         {% get_flatpages as flatpages %}
         <ul>
+          <li><a href="https://bit.ly/datenportal-fuer-essen" target="_blank">Entstehung & Hintergrund</a></li>
           {% for page in flatpages %}
           <li><a href="{{ page.url }}">{{ page.title }}</a></li>
           {% endfor %}

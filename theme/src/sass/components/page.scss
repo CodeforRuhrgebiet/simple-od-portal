@@ -54,10 +54,19 @@
       li {
 
         list-style: none;
+        margin-bottom: 0.4em;
 
       }
 
     }
+
+  }
+
+  &__credits:after {
+
+    display: block;
+    content: " ";
+    clear: both;
 
   }
 
