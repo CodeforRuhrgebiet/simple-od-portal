@@ -2,8 +2,8 @@
 
 {% load i18n %}
 
-{% block title %}{% trans 'Search results' %} {% trans 'for' %} "{{ object }}" – {% trans 'Open Data for Essen' %}{% endblock %}
-{% block og-title %}{% trans 'Search results' %} {% trans 'for' %} "{{ object }}" – {% trans 'Open Data for Essen' %}{% endblock %}
+{% block title %}{% trans 'Search results' %} {% trans 'for' %} "{{ request.GET.q }}" – {% trans 'Open Data for Essen' %}{% endblock %}
+{% block og-title %}{% trans 'Search results' %} {% trans 'for' %} "{{ request.GET.q }}" – {% trans 'Open Data for Essen' %}{% endblock %}
 
 {% block main %}
 
