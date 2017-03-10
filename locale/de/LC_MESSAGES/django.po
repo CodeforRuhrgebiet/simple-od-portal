@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-10 13:01+0100\n"
-"PO-Revision-Date: 2017-03-10 13:03+0100\n"
+"POT-Creation-Date: 2017-03-10 16:06+0100\n"
+"PO-Revision-Date: 2017-03-10 16:07+0100\n"
 "Last-Translator: Martin Schurig <martin@schurig.pw>\n"
 "Language-Team: \n"
 "Language: de\n"
@@ -38,12 +38,25 @@ msgstr "Als CSV runterladen"
 
 #: theme/templates/datasets/dataset_list.html:5
 #: theme/templates/datasets/dataset_list.html:6
+msgid "Simple Open Data Portal for Essen"
+msgstr "Einfaches Offenes Datenportal für die Stadt Essen"
+
 #: theme/templates/datasets/dataset_list.html:10
 msgid "All datasets"
 msgstr "Alle Datensätze"
 
-#: theme/templates/datasets/dataset_list.html:5
-#: theme/templates/datasets/dataset_list.html:6
+#: theme/templates/datasets/dataset_search.html:5
+#: theme/templates/datasets/dataset_search.html:6
+#: theme/templates/datasets/dataset_search.html:12
+msgid "Search results"
+msgstr "Suchergebnisse"
+
+#: theme/templates/datasets/dataset_search.html:5
+#: theme/templates/datasets/dataset_search.html:6
+#: theme/templates/datasets/dataset_search.html:12
+msgid "for"
+msgstr "für"
+
 #: theme/templates/datasets/dataset_search.html:5
 #: theme/templates/datasets/dataset_search.html:6
 #: theme/templates/datasets/tag_detail.html:5
@@ -52,19 +65,6 @@ msgstr "Alle Datensätze"
 #: theme/templates/datasets/tag_list.html:6
 msgid "Open Data for Essen"
 msgstr "Offene Daten für Essen"
-
-#: theme/templates/datasets/dataset_search.html:5
-#: theme/templates/datasets/dataset_search.html:6
-msgid "Search results for"
-msgstr "Suchergebnisse für"
-
-#: theme/templates/datasets/dataset_search.html:12
-msgid "Search results"
-msgstr "Suchergebnisse"
-
-#: theme/templates/datasets/dataset_search.html:12
-msgid "for"
-msgstr "für"
 
 #: theme/templates/datasets/dataset_search.html:17
 msgid "No results for"
@@ -93,6 +93,9 @@ msgstr "Datensätze mit Tag"
 #: theme/templates/datasets/tag_list.html:10
 msgid "All tags"
 msgstr "Alle Tags"
+
+#~ msgid "Search results for"
+#~ msgstr "Suchergebnisse für"
 
 #~ msgid "Created at"
 #~ msgstr "Erstellt am"
