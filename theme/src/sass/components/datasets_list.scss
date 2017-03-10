@@ -41,6 +41,16 @@
 
     }
 
+    &-h2 {
+
+      margin: 0;
+      color: $color-main;
+      font-weight: bold;
+      font-size: 1em;
+      text-decoration: none;
+
+    }
+
     .dataset__tag-list {
 
       margin-bottom: $padding-base/4;
