@@ -47,6 +47,8 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'django.contrib.sitemaps',
 
+    'markdown_deux',
+
     'datasets'
 ]
 

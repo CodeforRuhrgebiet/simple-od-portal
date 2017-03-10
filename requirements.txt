@@ -2,3 +2,4 @@ awesome-slugify==1.6.5
 Django==1.10.6
 pytz==2016.10
 PyYAML==3.12
+django-markdown-deux==1.0.5
