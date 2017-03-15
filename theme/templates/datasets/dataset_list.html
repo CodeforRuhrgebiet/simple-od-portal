@@ -9,6 +9,10 @@
 
 <h1>{% trans 'All datasets' %}</h1>
 
+<p>
+  {% blocktrans count counter=object_list|length %}There is 1 dataset.{% plural %}There are {{ counter }} datasets.{% endblocktrans %}
+</p>
+
 {% include './includes/dataset_list.html' %}
 
 {% endblock %}
