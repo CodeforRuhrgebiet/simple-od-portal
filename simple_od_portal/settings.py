@@ -27,9 +27,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = get_env('DJANGO_SECRET_KEY', 'v1oe_0j#c@itz8l5m0cf%+esw=1^#_ostl&b*me5rtvdi=w-*v')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = get_env('DJANGO_DEBUG', 'true') == 'true'
+# DEBUG = get_env('DJANGO_DEBUG', 'true') == 'true'
+DEBUG = False
 
-ALLOWED_HOSTS = [get_env('DJANGO_ALLOWED_HOSTS'), '*']
+# ALLOWED_HOSTS = [get_env('DJANGO_ALLOWED_HOSTS'), '*']
+ALLOWED_HOSTS = ['essen.openruhr.de', '127.0.0.1']
 
 
 # Application definition
