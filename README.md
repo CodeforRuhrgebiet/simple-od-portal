@@ -4,8 +4,6 @@ A really simple Open Data portal for cities that don't have one.
 
 ## development setup
 
-(if you like to use docker, see below).
-
 This project was initially developed under Python 3, but *should* work under 2, too (plz test).
 
 Use your preferred python packaging management / virtualization system. Recommendation: [virtualenv](https://virtualenv.pypa.io/en/stable/)
@@ -53,18 +51,6 @@ run watch mode:
 build css for production:
 
 `sass --style=compressed theme/src/sass/index.scss:theme/static/css/main.css`
-
-## development setup with docker
-
-1. run migrations `docker-compose run web python manage.py migrate`
-
-2. setup admin user `docker-compose run web python manage.py createsuperuser`
-
-3. start server `docker-compose up`
-
-open browser [http://localhost:8000](http://localhost:8000)
-
-login at [http://localhost:8000/admin/](http://localhost:8000/admin/)
 
 ## deployment
 
